@@ -5,47 +5,227 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
     <link rel="stylesheet" href="styles.css" />
+    <script src="collapsible.js" defer></script>
   </head>
   <body>
-    <h1>I'm an H1 - using our headings color</h1>
+    <div id="hero-section">
+      <h2>Hero</h2>
+      <nav class="nav collapsible">
+        <a class="nav_brand" href="#">logo here</a>
+        <svg class="icon icon-primary nav_toggler">
+          <use xlink:href="image/sprite.svg#menu"></use>
+        </svg>
+        <ul class="list nav_list collapsible_content">
+          <li class="nav_item"><a href="#">item 1 </a></li>
+          <li class="nav_item"><a href="#">item 2 </a></li>
+          <li class="nav_item"><a href="#">item 3 </a></li>
+          <li class="nav_item"><a href="#">item 4 </a></li>
+        </ul>
+      </nav>
+    </div>
+    <div id="hero-section">
+      <section class="block block-dark block-skewed-left hero">
+        <div class="block-container grid grid-2-col">
+          <header class="block_header hero_content">
+            <h1 class="block_heading">My Super fun HTML Component Page</h1>
+            <p class="hero_tagline">
+              All the markup you need for super fun html components
+            </p>
+            <a href="#" class="btn btn-primary">Check it out!</a>
+          </header>
+          <img class="hero_image" src="./images/oogway.png" alt="" />
+        </div>
+      </section>
+    </div>
+    <h1>I'm a h1 - using our headings color</h1>
     <div id="widget-grid">
       <div id="link-div">
-        <h2>Basic Link Styling</h2>
+        <h2>Basic Link Style</h2>
         <a href="#" class="link-arrow">Learn More</a>
       </div>
       <div id="badge-div">
-        <h2>Badges</h2>
         <p>
-          Homework passes
-          <span class="badge badge--primary">10% Off</span> Buy Now!
+          Homework passes <span class="badge badge--primary">10% off</span> Buy
+          Now
         </p>
         <p>
-          Exam Answer Keys
-          <span class="badge badge--secondary">15% Off</span>
+          Exam Answer Keys <span class="badge badge--secondary">15% off</span>
         </p>
         <p>
           ChatGPT Glasses
-          <span class="badge badge--primary badge--small">20% Off</span>
+          <span class="badge badge--primary badge--small">20% off</span>
         </p>
       </div>
       <div id="list-div">
-        <h2>Lists</h2>
-        <div id="unordered-list">
-          <h3>Unordered</h3>
-          <ul class="list checked-list">
-            <li class="list-item list-tick">Item 1</li>
-            <li class="list-item list-tick">Item 2</li>
-            <li class="list-item list-tick">Item 3</li>
+        <div id="unordered">
+          <ul class="list">
+            <li class="list-item list-tick">item 1</li>
+            <li class="list-item list-tick">item 2</li>
+            <li class="list-item list-tick">item 3</li>
           </ul>
         </div>
         <div id="horizontal-list">
-          <h3>Horizontal</h3>
-          <ul class="list list-horizontal">
+          <h3>horizontal</h3>
+          <ul class="list horizontal-list">
             <li class="list-item">Home</li>
             <li class="list-item">About</li>
             <li class="list-item">Contact</li>
           </ul>
         </div>
+      </div>
+      <div id="icon-div">
+        <h2>Icons with svg</h2>
+        <p>
+          I like computers sometimes
+          <span class="icon-container">
+            <svg class="icon icon-primary">
+              <use xlink:href="image/sprite.svg#computer"></use>
+            </svg>
+          </span>
+        </p>
+        <p>
+          Wordpress is both simple and complicated somehow
+          <span class="icon-container">
+            <svg class="icon icon-primary">
+              <use xlink:href="image/sprite.svg#wordpress"></use>
+            </svg>
+          </span>
+        </p>
+      </div>
+      <div id="button-div">
+        <button class="btn btn-primary">Buy Now</button>
+        <a href="#" class="btn btn-secondary btn-block">Buy Now</a>
+      </div>
+      <div id="input-div">
+        <h2>inputs</h2>
+        <input type="text" class="custom-input" placeholder="Enter Your SSN" />
+      </div>
+      <div class="s-media-div">
+        <h2>Media Objects</h2>
+        <div class="media">
+          <div class="media_image">
+            <svg class="icon icon-primary">
+              <use xlink:href="image/sprite.svg#clock"></use>
+            </svg>
+          </div>
+          <div class="media_body">
+            <h3 class="media_title">This is a note about Planets</h3>
+            <p>Jupiter is made of gas</p>
+          </div>
+        </div>
+      </div>
+      <div id="styled-quotes-div">
+        <h2>Quotes (styled)</h2>
+        <blockquote class="quote">
+          <p class="quote_text">
+            Two things are infinite: the universe and human stupidity; and I'm
+            not sure about the universe.
+          </p>
+          <footer>
+            <div class="media">
+              <div class="media_image">
+                <img class="icon" src="./image/einstein.avif" alt="Einstein" />
+              </div>
+              <div class="media_body">
+                <h3 class="media_title quote_author">Albert Einstein</h3>
+                <p class="quote_organization">Princeton</p>
+              </div>
+            </div>
+          </footer>
+        </blockquote>
+      </div>
+
+      <div id="grid-div">
+        <h2>More Grids</h2>
+        <h3>1x3</h3>
+        <div class="grid grid-3-col">
+          <div style="height: 100px; background: gold"></div>
+          <div style="height: 100px; background: dodgerblue"></div>
+          <div style="height: 100px; background: tomato"></div>
+        </div>
+        <h3>1x2</h3>
+        <div class="grid grid-2-col">
+          <div style="height: 100px; background: gold"></div>
+          <div style="height: 100px; background: dodgerblue"></div>
+        </div>
+      </div>
+
+      <div id="cards">
+        <h2>cards</h2>
+        <div class="card-wrapper">
+          <div class="card">
+            <div class="card-img">
+              <img src="./images/Bowser.png" alt="Bowser" />
+            </div>
+            <header class="card_header">Bowser!</header>
+            <div class="card_body">
+              He is the arch-nemesis of the plumber Mario and the leader of the
+              turtle-like Koopa race. Depicted as a fire-breathing monster with
+              a tyrannical personality.
+            </div>
+          </div>
+          <div class="card">
+            <div class="card-img">
+              <img src="./images/Bowser.png" alt="Bowser" />
+            </div>
+            <header class="card_header">Bowser!</header>
+            <div class="card_body">
+              He is the arch-nemesis of the plumber Mario and the leader of the
+              turtle-like Koopa race. Depicted as a fire-breathing monster with
+              a tyrannical personality.
+            </div>
+          </div>
+          <div class="card">
+            <div class="card-img">
+              <img src="./images/Bowser.png" alt="Bowser" />
+            </div>
+            <header class="card_header">Bowser!</header>
+            <div class="card_body">
+              He is the arch-nemesis of the plumber Mario and the leader of the
+              turtle-like Koopa race. Depicted as a fire-breathing monster with
+              a tyrannical personality.
+            </div>
+          </div>
+          <div class="card">
+            <div class="card-img">
+              <img src="./images/Bowser.png" alt="Bowser" />
+            </div>
+            <header class="card_header">Bowser!</header>
+            <div class="card_body">
+              He is the arch-nemesis of the plumber Mario and the leader of the
+              turtle-like Koopa race. Depicted as a fire-breathing monster with
+              a tyrannical personality.
+            </div>
+          </div>
+        </div>
+      </div>
+      <div id="collapsible">
+        <h2>Collapsibles (Use JS for DOM Manipulation)</h2>
+        <div class="collapsible collapsible-expanded">
+          <header class="collapsible_header">
+            <h3 class="collapsible_heading">Item 1</h3>
+            <svg class="icon icon-primary collapsible_chevron">
+              <use xlink:href="image/sprite.svg#chevron"></use>
+            </svg>
+          </header>
+          <div class="collapsible_content">
+            <p>Hi.</p>
+          </div>
+        </div>
+      </div>
+      <div id="blocks">
+        <h2>Blocks</h2>
+        <section class="block block-dark block-skewed-left">
+          <header class="block_header">
+            <h2 class="block_heading">Heading</h2>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Veniam
+              unde neque, a similique ea vitae laudantium tempora ratione saepe
+              aliquid doloremque laborum, voluptatum voluptates vero nemo
+              aperiam? Libero, aperiam soluta.
+            </p>
+          </header>
+        </section>
       </div>
     </div>
   </body>
